@@ -1,0 +1,21 @@
+html
+   head
+    include partials/Header.jade
+   body
+    include partials/Navigation.jade
+    br
+    br
+    .container
+  .row
+    .col-md-12
+      p.headingfont(align='center')
+
+    include partials/Align.jade
+    br
+    .container
+      .row
+        - for (var i = 1; i <= numberOfImages; i++)
+              .col-md-4
+               .thumbnail
+                 img(src='/images/'+cityName+'/'+cityName+'-'+i+'.jpg', name='image', style='width:350px;height:250px;')
+    include partials/Footer.jade
